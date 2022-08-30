@@ -2,6 +2,6 @@ interface IHttpRequest {
   //   get<T>();
 }
 
-const service: IHttpRequest = {};
+const service: IHttpRequest = {}
 
-export default service;
+export default service
