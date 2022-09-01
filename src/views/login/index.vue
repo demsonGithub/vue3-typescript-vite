@@ -6,6 +6,9 @@
       >测试element-plus按需导入</el-button
     >
   </div>
+  <div>
+    <svg-icon icon="info"></svg-icon>
+  </div>
 </template>
 
 <script lang="ts" setup>
