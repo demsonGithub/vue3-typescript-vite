@@ -6,6 +6,7 @@ import viteCompression from 'vite-plugin-compression'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import svgBuilder from './src/plugins/svgBuilder'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -26,6 +27,7 @@ export default defineConfig({
       resolvers: [ElementPlusResolver()],
       dts: 'src/types/components.d.ts',
     }),
+    svgBuilder(path.resolve('./src/assets/svg')),
   ],
   resolve: {
     alias: {
