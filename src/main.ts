@@ -3,7 +3,10 @@ import App from './App.vue'
 import router from './router'
 import piniaStore from './store'
 
-import { SvgIcon, SvgIconProps } from '@/components/SvgIcon/index'
+import { SvgIcon } from '@/components/SvgIcon/index'
+
+import initMock from '@/mock/index'
+initMock()
 
 const app = createApp(App)
 
