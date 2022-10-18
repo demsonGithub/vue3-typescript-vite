@@ -45,6 +45,7 @@ module.exports = {
         ignores: ['index'], //需要忽略的组件名
       },
     ],
+    'no-unsafe-finally': 'off',
     // 禁止出现console
     'no-console': 'warn',
     // 禁用debugger
