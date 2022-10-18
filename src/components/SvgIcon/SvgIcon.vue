@@ -17,7 +17,7 @@
 </template>
 
 <script lang="ts" setup>
-import { isExternal as external } from '@/utils/validate'
+import { isExternal as external } from '@/utils/Validate'
 import { computed, useAttrs } from 'vue'
 
 export interface SvgIconProps {

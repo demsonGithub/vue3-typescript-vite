@@ -1,6 +1,4 @@
 import Mock, { Random } from 'mockjs'
-import { IMockFormat } from '../types'
-import { RequestType } from '@/types/enum'
 
 // 模拟登录数据
 const loginMockData = {
@@ -15,7 +13,7 @@ const loginMockData = {
 // 模拟登录返回
 const loginMock: IMockFormat = {
   url: '/user/login',
-  requestType: RequestType.get,
+  requestType: 'get',
   responseAction: () => {
     return loginMockData
   },
@@ -31,7 +29,7 @@ const registerMockData = {
 
 const registerMock: IMockFormat = {
   url: '/user/register',
-  requestType: RequestType.get,
+  requestType: 'get',
   responseAction: () => {
     return registerMockData
   },

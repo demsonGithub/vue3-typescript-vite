@@ -10,6 +10,12 @@ import svgBuilder from './src/plugins/svgBuilder'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  server: {
+    host: '0.0.0.0',
+    port: 8080,
+    https: false,
+    proxy: {},
+  },
   plugins: [
     vue(),
     viteCompression({
@@ -33,6 +39,7 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, 'src'),
     },
+    extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json'],
   },
   css: {
     preprocessorOptions: {
@@ -67,12 +74,7 @@ export default defineConfig({
       ],
     },
   },
-  server: {
-    host: '0.0.0.0',
-    port: 8080,
-    https: false,
-    proxy: {},
-  },
+
   build: {
     minify: 'terser',
     terserOptions: {

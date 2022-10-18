@@ -1,5 +1,4 @@
 import Mock from 'mockjs'
-import { IMockFormat } from './types'
 
 import user from './modules/user'
 
