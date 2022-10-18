@@ -2,7 +2,9 @@
   <div class="layout-wrapper">
     <el-container class="main-wrapper">
       <el-header>Header</el-header>
-      <el-main>Main</el-main>
+      <el-main>
+        <router-view></router-view>
+      </el-main>
     </el-container>
   </div>
 </template>

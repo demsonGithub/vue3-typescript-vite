@@ -90,6 +90,7 @@ export function dataToRouteRecordRaw(menulist: any[]) {
         /** 如果没有找到对应的组件，赋值一个提示组件 */
         if (isUnDef(targetComponent)) {
           targetComponent = NotFoundComponent
+          // eslint-disable-next-line no-console
           console.warn(
             `message:the target component was not found,${item.path}`
           )

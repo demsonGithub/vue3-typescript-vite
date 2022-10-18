@@ -30,7 +30,8 @@ router.beforeEach(async (to, from, next) => {
             next({ ...to, replace: true })
           }
         } catch (err) {
-          console.error('router.beforeEach:', err)
+          // eslint-disable-next-line no-console
+          console.error('路由拦截器异常:', err)
           next(`/login?redirect=${to.path}`)
         }
       }

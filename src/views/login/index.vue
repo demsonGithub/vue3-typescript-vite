@@ -15,8 +15,6 @@
 </template>
 
 <script lang="ts" setup>
-import loginApi from '@/api/login'
-import { ILoginParams } from '@/api/login/types'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
@@ -25,12 +23,5 @@ const gotoHome = () => {
   router.push({ path: '/home' })
 }
 
-const testMock = async () => {
-  const apiParams: ILoginParams = {
-    username: 'admin',
-    password: 'abc',
-  }
-  const result = await loginApi.login(apiParams)
-  console.log(result)
-}
+const testMock = async () => {}
 </script>

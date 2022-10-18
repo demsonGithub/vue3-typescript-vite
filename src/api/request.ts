@@ -26,6 +26,7 @@ class RequestInstance {
         return config
       },
       (error: any) => {
+        // eslint-disable-next-line no-console
         console.error(error)
       }
     )
@@ -57,7 +58,8 @@ class RequestInstance {
           return Promise.reject(response.data)
         }
         // 处理请求超时,断网的情况
-        console.log('网络连接异常,请稍后再试!')
+        // eslint-disable-next-line no-console
+        console.log('处理请求超时!')
       }
     )
   }
@@ -74,10 +76,12 @@ class RequestInstance {
       case 403:
         break
       case 404:
+        // eslint-disable-next-line no-console
         console.log('请求的资源不存在')
         break
       default:
-        console.log('连接错误')
+        // eslint-disable-next-line no-console
+        console.log('未知错误状态码:' + res.status)
     }
   }
 
